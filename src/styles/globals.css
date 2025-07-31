@@ -1,0 +1,24 @@
+/* src/styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Georgia&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.theme1 {
+  font-family: 'Arial', sans-serif;
+}
+
+.theme2 {
+  font-family: 'Georgia', serif;
+}
+
+.theme3 {
+  font-family: 'Pacifico', cursive;
+}
+
+* {
+  box-sizing: border-box;
+}

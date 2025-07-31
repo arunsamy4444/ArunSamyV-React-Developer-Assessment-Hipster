@@ -1,0 +1,103 @@
+/* styles/Contact.module.css */
+.container {
+  min-height: 100vh;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.containerTheme1 {
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+}
+
+.containerTheme2 {
+  background-color: #1a1a1a;
+  font-family: 'Georgia', serif;
+  color: white;
+}
+
+.containerTheme3 {
+  background-color: #fff0f0;
+  font-family: 'Pacifico', cursive;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.containerTheme1 .title {
+  color: #333;
+}
+
+.containerTheme2 .title {
+  color: #fff;
+}
+
+.containerTheme3 .title {
+  color: #ff6b6b;
+}
+
+.contactInfo {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.containerTheme2 .contactForm input,
+.containerTheme2 .contactForm textarea {
+  background-color: #333;
+  border-color: #444;
+  color: white;
+}
+
+.containerTheme3 .contactForm input,
+.containerTheme3 .contactForm textarea {
+  background-color: white;
+  border-color: #ffcccc;
+}
+
+.submitButton {
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.containerTheme1 .submitButton {
+  background-color: #4285f4;
+  color: white;
+}
+
+.containerTheme2 .submitButton {
+  background-color: #9c27b0;
+  color: white;
+}
+
+.containerTheme3 .submitButton {
+  background-color: #ff6b6b;
+  color: white;
+}

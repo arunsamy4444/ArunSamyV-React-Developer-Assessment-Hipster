@@ -1,0 +1,63 @@
+/* styles/About.module.css */
+.container {
+  min-height: 100vh;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.containerTheme1 {
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+}
+
+.containerTheme2 {
+  background-color: #1a1a1a;
+  font-family: 'Georgia', serif;
+  color: white;
+}
+
+.containerTheme3 {
+  background-color: #fff0f0;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.titleTheme1 {
+  color: #333;
+}
+
+.titleTheme2 {
+  color: #fff;
+}
+
+.titleTheme3 {
+  color: #ff6b6b;
+}
+
+.text {
+  line-height: 1.6;
+}
+
+.containerTheme1 .text {
+  color: #555;
+}
+
+.containerTheme2 .text {
+  color: #ddd;
+}
+
+.containerTheme3 .text {
+  color: #666;
+}
