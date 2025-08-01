@@ -1,5 +1,6 @@
-
 # HipsterShop – React Theme Switcher Demo
+
+🌐 [Live Demo](https://arun-samy-v-react-developer-assessm.vercel.app/)
 
 A responsive e-commerce demo app with 3 switchable themes using React + TypeScript.
 
@@ -17,9 +18,7 @@ cd ArunSamyV-React-Developer-Assessment-Hipster
 npm install
 npm start
 
-
 ## 🗂️ Project Structure
-
 
 src/
 ├─ components/   # Header, ProductCard, MainContent
@@ -27,7 +26,6 @@ src/
 ├─ context/      # ThemeContext
 ├─ styles/       # Themes + Global CSS
 └─ App.tsx
-
 
 ## 🎨 Themes
 
@@ -38,5 +36,4 @@ src/
 ## 📦 Stack
 
 * React 18, TypeScript, React Router
-* CSS Modules, localStorage
-  
+* CSS Modules, localStorage 
