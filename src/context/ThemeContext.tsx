@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
 
-// Define and export the Theme type once
+// Theme context provider for managing application-wide theme
 export type Theme = "theme1" | "theme2" | "theme3";
 
 interface ThemeContextProps {
@@ -14,6 +14,7 @@ const ThemeContext = createContext<ThemeContextProps>({
 });
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+    // Initialize theme from localStorage or fallback to default
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window !== "undefined") {
       return (localStorage.getItem("app-theme") as Theme) || "theme1";
@@ -21,6 +22,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     return "theme1";
   });
 
+    // Sync theme with body class and localStorage
   useEffect(() => {
     document.body.className = theme;
     localStorage.setItem("app-theme", theme);
@@ -33,8 +35,5 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   );
 };
 
-// Export the useTheme hook
+// Custom hook for easy theme access
 export const useTheme = () => useContext(ThemeContext);
-
-// Remove the duplicate export at the bottom
-// The Theme type is already exported at the top

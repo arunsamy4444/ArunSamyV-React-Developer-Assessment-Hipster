@@ -3,9 +3,11 @@ import React from "react";
 import { useTheme } from "../context/ThemeContext";
 import styles from "../styles/About.module.css";
 
+// About page with theme-responsive styling
 const About: React.FC = () => {
-  const { theme } = useTheme();
-
+  const { theme } = useTheme();// Access current theme from context
+  
+  // Returns container class based on active theme
   const getContainerClass = () => {
     switch (theme) {
       case "theme1":
@@ -19,6 +21,7 @@ const About: React.FC = () => {
     }
   };
 
+    // Returns title class based on active theme
   const getTitleClass = () => {
     switch (theme) {
       case "theme1":
@@ -34,8 +37,11 @@ const About: React.FC = () => {
 
   return (
     <div className={getContainerClass()}>
+      {/* Main content container */}
       <div className={styles.content}>
+          {/* Theme-responsive page title */}
         <h1 className={getTitleClass()}>About Us</h1>
+         {/* Static content about theme switching */}
         <div className={styles.text}>
           <p>
             We are a hipster company dedicated to bringing you the best theme switching experience.

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
 import styles from "../styles/Contact.module.css";
 
+// Contact page with form submission and theme support
 const Contact: React.FC = () => {
   const { theme } = useTheme();
   const [showToast, setShowToast] = useState(false);
@@ -12,6 +13,7 @@ const Contact: React.FC = () => {
     message: ''
   });
 
+  // Theme-specific styling for container and toast
   const getContainerClass = () => {
     switch (theme) {
       case "theme1": return `${styles.container} ${styles.containerTheme1}`;
@@ -21,6 +23,7 @@ const Contact: React.FC = () => {
     }
   };
 
+    // Form handlers and auto-dismiss toast effect
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -60,15 +63,18 @@ const Contact: React.FC = () => {
 
   return (
     <div className={getContainerClass()}>
+      {/* Success toast notification */}
       {showToast && (
         <div className={getToastClass()}>
           Your message has been sent successfully!
         </div>
       )}
-
+       {/* Contact information and form section */}
       <div className={styles.content}>
         <h1 className={styles.title}>Contact Us</h1>
+        {/* Static contact details */}
         <div className={styles.contactInfo}>
+          {/* Controlled contact form */}
           <p>
             <strong>Email:</strong> hr@xxxxx.com
           </p>
@@ -80,6 +86,7 @@ const Contact: React.FC = () => {
           </p>
         </div>
         <form className={styles.contactForm} onSubmit={handleSubmit}>
+          {/* Form inputs and submit button */}
           <input 
             type="text" 
             name="name"

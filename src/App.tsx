@@ -7,10 +7,13 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import "./styles/globals.css";
 
+// Main application component with routing configuration
 const App: React.FC = () => {
   return (
     <Router>
+       {/* Persistent header across all routes */}
       <Header />
+       {/* Route definitions for application pages */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

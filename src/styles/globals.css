@@ -1,12 +1,14 @@
-/* src/styles/globals.css */
+/* Global styles and theme base configurations */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Georgia&display=swap');
 
+/* Reset default browser styles and add smooth transitions */
 body {
   margin: 0;
   padding: 0;
   transition: all 0.3s ease;
 }
 
+/* Theme-specific typography styles */
 .theme1 {
   font-family: 'Arial', sans-serif;
 }
@@ -19,6 +21,7 @@ body {
   font-family: 'Pacifico', cursive;
 }
 
+/* Universal box-sizing for consistent element sizing */
 * {
   box-sizing: border-box;
 }

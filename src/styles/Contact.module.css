@@ -1,4 +1,5 @@
-/* styles/Contact.module.css */
+
+/* Contact page container with theme-specific backgrounds */
 .container {
   min-height: 100vh;
   padding-top: 4rem;
@@ -6,6 +7,7 @@
   transition: all 0.3s ease;
 }
 
+/* Theme variants for entire contact page styling */
 .containerTheme1 {
   background-color: #f9f9f9;
   font-family: 'Arial', sans-serif;
@@ -58,6 +60,7 @@
   max-width: 500px;
 }
 
+/* Form styling with theme-aware input fields */
 .contactForm input,
 .contactForm textarea {
   padding: 0.75rem;
@@ -102,7 +105,7 @@
   color: white;
 }
 
-/* Add to Contact.module.css */
+/* Toast notification with entrance animation */
 .toast {
   position: fixed;
   top: 20px;
@@ -126,6 +129,7 @@
   }
 }
 
+/* Theme-specific toast colors */
 .toastTheme1 {
   background-color: #4285f4;
 }

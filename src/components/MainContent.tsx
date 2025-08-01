@@ -5,7 +5,7 @@ import styles from "../styles/MainContent.module.css";
 import { fetchProducts } from "../utils/api";
 import ProductCard from "./ProductCard";
 
-
+// Product interface for type safety
 interface Product {
   id: number;
   title: string;
@@ -15,11 +15,13 @@ interface Product {
   image: string;
 }
 
+// Main content area with theme-responsive product display
 const MainContent: React.FC = () => {
   const { theme } = useTheme();
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
 
+    // Fetch products on component mount
 useEffect(() => {
   const loadProducts = async () => {
     try {
@@ -35,6 +37,7 @@ useEffect(() => {
   loadProducts();
 }, []);
 
+// Theme-specific style getters
   const getContainerClass = () => {
     switch (theme) {
       case "theme1":
@@ -81,6 +84,7 @@ useEffect(() => {
  return (
     <div className={getContainerClass()}>
       <div className={styles.content}>
+        {/* Theme-specific header content */}
         <h1 className={getTitleClass()}>
           {theme === "theme1" 
             ? "Minimalist Collection" 
@@ -105,7 +109,7 @@ useEffect(() => {
               : "Start Shopping"}
         </button>
         
-        {/* Add theme-specific layout differences */}
+        {/* Theme 2 sidebar for categories */}
         {theme === "theme2" && (
           <aside className={styles.sidebar}>
             <h3>Categories</h3>
@@ -117,7 +121,7 @@ useEffect(() => {
           </aside>
         )}
 
-
+  {/* Products grid */}
 <div className={styles.productsGrid}>
   {products.map(product => (
     <ProductCard 

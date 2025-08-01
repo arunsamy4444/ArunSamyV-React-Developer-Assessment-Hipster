@@ -1,4 +1,4 @@
-/* styles/About.module.css */
+/* About page container with full viewport height */
 .container {
   min-height: 100vh;
   padding-top: 4rem;
@@ -6,6 +6,7 @@
   transition: all 0.3s ease;
 }
 
+/* Theme-specific background and typography */
 .containerTheme1 {
   background-color: #f9f9f9;
   font-family: 'Arial', sans-serif;
@@ -22,12 +23,14 @@
   font-family: 'Comic Sans MS', cursive;
 }
 
+/* Content container with max-width for readability */
 .content {
   max-width: 800px;
   margin: 0 auto;
   padding: 1rem;
 }
 
+/* Theme-aware title styling */
 .title {
   font-size: 2rem;
   margin-bottom: 1.5rem;
@@ -50,6 +53,7 @@
   line-height: 1.6;
 }
 
+/* Paragraph text with theme-specific colors */
 .containerTheme1 .text {
   color: #555;
 }

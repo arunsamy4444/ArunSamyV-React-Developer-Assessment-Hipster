@@ -4,6 +4,7 @@ import { useTheme, Theme } from "../context/ThemeContext";
 import { Link } from "react-router-dom";
 import styles from "../styles/Header.module.css";
 
+// App logo component
 const Logo = () => (
   <div className={styles.logo}>
     <span className={styles.logoIcon}>🛍️</span>
@@ -11,6 +12,7 @@ const Logo = () => (
   </div>
 );
 
+// Main header with navigation and theme switcher
 const Header: React.FC = () => {
   const { theme, setTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,6 +21,7 @@ const Header: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+// Theme-specific style getters
   const getHeaderClass = () => {
     switch (theme) {
       case "theme1": return `${styles.header} ${styles.headerTheme1}`;
@@ -75,6 +78,7 @@ const Header: React.FC = () => {
       </div>
       
       <div className={styles.headerRight}>
+         {/* Desktop Navigation */}
         <div className={styles.desktopNav}>
           <Link to="/" className={getNavLinkClass()}>
             Home
@@ -124,6 +128,7 @@ const Header: React.FC = () => {
           )}
         </div>
 
+{/* Theme Switcher */}
         <select 
           value={theme}
           onChange={handleChange}

@@ -1,4 +1,4 @@
-/* styles/MainContent.module.css */
+/* Main theme container styles with responsive transitions */
 .container {
   min-height: 100vh;
   padding-top: 4rem;
@@ -6,6 +6,7 @@
   transition: all 0.3s ease;
 }
 
+/* Theme-specific color schemes and typography */
 .containerTheme1 {
   background-color: #f9f9f9;
   font-family: 'Arial', sans-serif;
@@ -51,6 +52,8 @@
   max-width: 600px;
 }
 
+
+/* Interactive button styles with theme variations */
 .button {
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
@@ -93,6 +96,7 @@
   gap: 1.5rem;
 }
 
+/* Theme-aware product card styling */
 .productCard {
   border-radius: 8px;
   overflow: hidden;
@@ -202,7 +206,7 @@
 }
 
 
-/* Add to MainContent.module.css */
+
 .sidebar {
   width: 200px;
   padding: 1rem;
@@ -238,15 +242,15 @@
   color: white;
 }
 
-/* Update in MainContent.module.css */
+
 .containerTheme2 {
   background-color: #1a1a1a;
   font-family: 'Georgia', serif;
   color: white;
-  display: block; /* Change from flex to block for mobile */
+  display: block; 
 }
 
-/* Add mobile-specific sidebar styles */
+/* Mobile-first responsive sidebar layout */
 @media (max-width: 768px) {
   .containerTheme2 .sidebar {
     width: 100%;
@@ -261,7 +265,6 @@
 }
 
 
-/* Add to MainContent.module.css */
 .cardTheme1 {
   background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);

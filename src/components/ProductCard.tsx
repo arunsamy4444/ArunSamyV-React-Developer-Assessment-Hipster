@@ -3,6 +3,7 @@ import React from "react";
 import { Theme } from "../context/ThemeContext";
 import styles from "../styles/MainContent.module.css";
 
+// Reusable product card component with theme support
 interface ProductCardProps {
   product: {
     id: number;
@@ -16,6 +17,7 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, theme }) => {
+    // Applies theme-specific styling to card container
   const getCardStyle = () => {
     switch (theme) {
       case "theme1":
@@ -29,6 +31,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, theme }) => {
     }
   };
 
+    // Applies theme-specific styling to action button
   const getButtonStyle = () => {
     switch (theme) {
       case "theme1":
