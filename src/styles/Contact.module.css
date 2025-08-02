@@ -1,4 +1,3 @@
-
 /* Contact page container with theme-specific backgrounds */
 .container {
   min-height: 100vh;
@@ -140,4 +139,51 @@
 
 .toastTheme3 {
   background-color: #ff6b6b;
+}
+
+/* Tablet Responsiveness (600px - 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .container {
+    padding-top: 3.5rem; /* Slightly reduced padding */
+  }
+  
+  .title {
+    font-size: 1.8rem; /* Slightly smaller title */
+    margin-bottom: 1.2rem;
+  }
+  
+  .contactForm {
+    max-width: 450px; /* Slightly narrower form */
+  }
+  
+  .contactForm input,
+  .contactForm textarea {
+    padding: 0.65rem; /* Slightly smaller padding */
+  }
+  
+  .submitButton {
+    padding: 0.65rem; /* Smaller button */
+    font-size: 0.95rem;
+  }
+  
+  .contactInfo {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem; /* Slightly smaller text */
+  }
+  
+  .toast {
+    padding: 10px 20px; /* Slightly smaller toast */
+    font-size: 0.95rem;
+  }
+}
+
+/* Large Tablet Adjustments (800px - 1024px) */
+@media (min-width: 800px) and (max-width: 1024px) {
+  .content {
+    padding: 1.5rem; /* More breathing room */
+  }
+  
+  .contactForm {
+    gap: 1.2rem; /* Slightly larger gaps */
+  }
 }

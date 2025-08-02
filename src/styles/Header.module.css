@@ -9,11 +9,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.3s ease; /* Smooth theme transitions */
 }
 
+/* Header sections layout */
 .headerLeft {
   display: flex;
   align-items: center;
+  flex-shrink: 0; /* Prevent logo shrinking */
 }
 
 .headerRight {
@@ -22,7 +25,7 @@
   gap: 1rem;
 }
 
-/* Theme variants for header background and text colors */
+/* Theme variants for header */
 .headerTheme1 {
   background-color: white;
   color: #222;
@@ -38,10 +41,12 @@
   color: white;
 }
 
+/* Logo styling */
 .logo {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  padding: 0.25rem 0; /* Better vertical alignment */
 }
 
 .logoIcon {
@@ -51,11 +56,15 @@
 .logoText {
   font-weight: bold;
   font-size: 1.2rem;
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
+/* Theme selector dropdown */
 .select {
   padding: 0.5rem;
   border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .selectTheme1 {
@@ -75,20 +84,21 @@
   color: white;
 }
 
-/* Navigation Styles */
+/* Desktop navigation */
 .desktopNav {
   display: flex;
   gap: 1rem;
 }
 
-/* Navigation link styles with hover effects per theme */
 .navLink {
   text-decoration: none;
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem; /* Better touch targets */
   border-radius: 4px;
   transition: all 0.2s;
+  white-space: nowrap;
 }
 
+/* Theme-specific nav links */
 .navLinkTheme1 {
   color: #333;
 }
@@ -113,13 +123,13 @@
   background-color: #ff5252;
 }
 
-/* Mobile Navigation */
+/* Mobile navigation toggle */
 .mobileNav {
   position: relative;
   display: none;
 }
 
-/* Mobile hamburger menu with theme-aware colors */
+/* Hamburger menu icon */
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -142,6 +152,7 @@
   transform-origin: 1px;
 }
 
+/* Theme-specific hamburger colors */
 .hamburgerTheme1 span {
   background-color: #333;
 }
@@ -154,7 +165,7 @@
   background-color: white;
 }
 
-/* Mobile Menu */
+/* Mobile dropdown menu */
 .menu {
   position: absolute;
   right: 0;
@@ -162,12 +173,13 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 0.5rem;
+  padding: 0.75rem; /* More padding for touch */
   border-radius: 4px;
   z-index: 20;
+  min-width: 180px; /* Better mobile menu width */
 }
 
-/* Dropdown menu styles that match each theme */
+/* Theme-specific mobile menus */
 .menuTheme1 {
   background-color: white;
   border: 1px solid #ddd;
@@ -186,7 +198,28 @@
   box-shadow: 0 2px 8px rgba(255, 107, 107, 0.2);
 }
 
-/* Responsive behavior - switches to mobile menu below 768px */
+/* Tablet Responsive Adjustments (600px-1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .header {
+    padding: 0.75rem 1rem; /* Slightly reduced padding */
+  }
+  
+  .logoText {
+    font-size: 1.1rem; /* Slightly smaller logo */
+  }
+  
+  .navLink {
+    padding: 0.5rem; /* Adjusted padding */
+    font-size: 0.9rem; /* Slightly smaller text */
+  }
+  
+  .select {
+    padding: 0.4rem; /* Smaller select */
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Responsive Behavior (below 768px) */
 @media (max-width: 768px) {
   .desktopNav {
     display: none;
@@ -194,5 +227,28 @@
   
   .mobileNav {
     display: block;
+  }
+  
+  .headerRight {
+    gap: 0.75rem; /* Reduced gap */
+  }
+  
+  .logoText {
+    font-size: 1rem; /* Smaller logo text */
+  }
+}
+
+/* Very small mobile devices (below 480px) */
+@media (max-width: 480px) {
+  .header {
+    padding: 0.5rem; /* Compact padding */
+  }
+  
+  .logoIcon {
+    font-size: 1.25rem; /* Smaller icon */
+  }
+  
+  .logoText {
+    font-size: 0.9rem; /* Very small logo */
   }
 }

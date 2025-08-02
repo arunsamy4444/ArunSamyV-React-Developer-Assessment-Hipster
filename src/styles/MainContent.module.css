@@ -280,3 +280,34 @@
   box-shadow: 0 2px 8px rgba(255, 107, 107, 0.2);
   border: 1px solid #ffcccc;
 }
+
+
+/* Tablet-specific adjustments (600px-900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+  .title {
+    font-size: 1.75rem; /* Slightly smaller titles */
+  }
+  
+  .productImage {
+    height: 160px; /* Reduced image height */
+  }
+  
+  .content {
+    padding: 1.5rem; /* More breathing room */
+  }
+  
+  .button {
+    padding: 0.6rem 1.2rem; /* Slightly smaller buttons */
+  }
+}
+
+/* Larger tablets in portrait (768px+) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .productDetails {
+    padding: 0.8rem; /* Tighter product info spacing */
+  }
+  
+  .price {
+    font-size: 0.9rem; /* Smaller price text */
+  }
+}

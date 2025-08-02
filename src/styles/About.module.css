@@ -65,3 +65,62 @@
 .containerTheme3 .text {
   color: #666;
 }
+
+/* Tablet Responsiveness (600px - 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .container {
+    padding-top: 3.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .content {
+    padding: 1.5rem;
+    max-width: 90%; /* Slightly wider content area */
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .text {
+    font-size: 1.05rem; /* Slightly larger text for readability */
+    line-height: 1.7;
+  }
+
+  /* Theme-specific tablet adjustments */
+  .containerTheme1 .text {
+    color: #444; /* Slightly darker for better contrast */
+  }
+
+  .containerTheme3 .text {
+    color: #555; /* Darker for better readability */
+  }
+}
+
+/* Large Tablet Optimizations (800px - 1024px) */
+@media (min-width: 800px) and (max-width: 1024px) {
+  .content {
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 2rem; /* Restore original size for large tablets */
+    margin-bottom: 1.8rem;
+  }
+
+  .text {
+    font-size: 1.1rem;
+  }
+}
+
+/* Portrait Tablet Adjustments */
+@media (min-width: 600px) and (max-width: 800px) and (orientation: portrait) {
+  .content {
+    padding: 1.2rem;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+}
